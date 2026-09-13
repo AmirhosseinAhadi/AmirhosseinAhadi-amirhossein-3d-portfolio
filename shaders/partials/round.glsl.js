@@ -1,0 +1,1 @@
+export default "float round(float _value)\n{\n    float signum = sign(_value);\n    float number = abs(_value);\n    float number2 = fract(number);\n    number = floor(number);\n    number2 = ceil((sign(number2 - 0.5) + 1.0) * 0.5);\n    number = (number + number2)*signum;\n    return number;\n}";
